@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `1.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
@@ -19,6 +23,7 @@ module.exports = {
         accessToken: 'jf1r_VPBttRFjy1E1_HR-6E3eIoM1gdFedwpCHyTFbA'
       }
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
