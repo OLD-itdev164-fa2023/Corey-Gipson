@@ -15,16 +15,15 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gastby-plugin-styled-components`,
     {
-      resolve: 'gatsby-source-contentful', 
+      resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'migrifcke6l8',
-        accessToken: 'jf1r_VPBttRFjy1E1_HR-6E3eIoM1gdFedwpCHyTFbA'
-      }
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`,
+      },
     },
     `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,8 +31,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
