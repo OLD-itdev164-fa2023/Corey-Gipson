@@ -4,18 +4,13 @@
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
-
  import * as React from "react"
  import PropTypes from "prop-types"
  import { useStaticQuery, graphql } from "gatsby"
  import styled, { ThemeProvider } from 'styled-components'
  
  import { Gray } from './themes/Gray'
-<<<<<<< HEAD
- import  Header  from "./Header"
-=======
- import Header from "./header"
->>>>>>> db39009ac991275e15273ad4df7ac1dc21b65ae9
+ import Header  from "./Header"
  import "./layout.css"
  
  const Content = styled.div`
