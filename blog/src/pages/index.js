@@ -4,7 +4,7 @@ import { GatsbyImage } from  "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { List, ListItem } from '../components/List'
+import { List, ListItem } from "../components/List"
 import * as styles from "../components/index.module.css"
 
 const IndexPage = ({ data }) => (
@@ -49,7 +49,7 @@ export const query = graphql`
           gatsbyImageData (
             layout:CONSTRAINED
             placeholder:BLURRED
-            width: 300
+            width: 600
           )
         }
       }
