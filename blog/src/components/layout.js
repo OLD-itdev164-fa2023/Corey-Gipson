@@ -11,7 +11,11 @@
  import styled, { ThemeProvider } from 'styled-components'
  
  import { Gray } from './themes/Gray'
+<<<<<<< HEAD
+ import  Header  from "./Header"
+=======
  import Header from "./header"
+>>>>>>> db39009ac991275e15273ad4df7ac1dc21b65ae9
  import "./layout.css"
  
  const Content = styled.div`

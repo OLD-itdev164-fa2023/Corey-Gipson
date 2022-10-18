@@ -4,31 +4,31 @@ import { GatsbyImage } from  "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { List, ListItem } from "../components/List"
 import * as styles from "../components/index.module.css"
 
-const IndexPage = ({data})=>(
+const IndexPage = ({ data }) => (
   <Layout>
-  <Seo title="Home"/>
-  <ul className={styles.list}>
-  {
-    data.allContentfulBlogPost.edges.map(edge =>(
+    <Seo title="Home" />
 
-      <li key={edge.node.id}>
-      <Link to={edge.node.slug}>{edge.node.title}</Link>
-      <div>
-        <GatsbyImage 
-          image={edge.node.heroImage.gatsbyImageData}
-        />
-      </div>
-      <div>
-        {edge.node.body.childMarkdownRemark.excerpt}
-      </div>
-      </li>
-    ))
-  }
-  </ul>
+    <List width={[1, 2 / 3, 7 / 8]} p={2}>
+      {data.allContentfulBlogPost.edges.map(edge => (
+        <ListItem key={edge.node.id} p={3}>
+          <Link to={edge.node.slug}>{edge.node.title}</Link>
+          <div>
+            <GatsbyImage
+              image={edge.node.heroImage.gatsbyImageData}
+              alt={edge.node.title}
+            />
+          </div>
+          <div>{edge.node.body.childMarkdownRemark.excerpt}</div>
+        </ListItem>
+      ))}
+    </List>
   </Layout>
 )
+
+export const Head = () => <Seo title="Home" />
 
 export default IndexPage
 
@@ -49,7 +49,7 @@ export const query = graphql`
           gatsbyImageData (
             layout:CONSTRAINED
             placeholder:BLURRED
-            width: 300
+            width: 600
           )
         }
       }
