@@ -6,6 +6,8 @@ import { Search } from 'styled-icons/feather'
 import { H1 } from '../Heading'
 import { IconButton } from '../Button'
 import { Section } from '../Section'
+import { H1 } from '../Heading'
+import { Section } from '../Section'
 
 const Outer = styled.header`
   background: ${({ theme }) => theme.variants.header.primary.backgroundColor};
@@ -28,14 +30,19 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <Outer>
     <Section width={11/12}>
+      <Section width={11/12}>
       <H1>
-        <StyledLink to="/">
-          {siteTitle}
-        </StyledLink>
-      </H1>
+          <StyledLink to="/">
+            {siteTitle}
+          </StyledLink>
+        </H1>
     </Section>
     <Section width={1/12}>
       <IconButton icon={<Search />} variant='contrast' />
+    </Section>
+    </Section>
+    <Section width={1/12}>
+      Search
     </Section>
   </Outer>
 )
