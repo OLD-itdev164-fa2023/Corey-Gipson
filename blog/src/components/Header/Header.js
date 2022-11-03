@@ -6,8 +6,6 @@ import { Search } from 'styled-icons/feather'
 import { H1 } from '../Heading'
 import { IconButton } from '../Button'
 import { Section } from '../Section'
-import { H1 } from '../Heading'
-import { Section } from '../Section'
 
 const Outer = styled.header`
   background: ${({ theme }) => theme.variants.header.primary.backgroundColor};
