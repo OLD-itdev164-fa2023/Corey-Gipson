@@ -1,5 +1,5 @@
 import React from 'react'
-import mainHeaderImage from './images/react.png'
+import mainHeaderImage from '/Users/coreygipson/MATC/ITDev-164/Corey-Gipson-1/blog/src/images/react.png'
 import { Search } from 'styled-icons/feather'
 
 const images = {
